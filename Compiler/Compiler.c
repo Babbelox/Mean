@@ -1,7 +1,18 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 
-int main (){
+void meanpile(int argc, char* argv[]){
+    FILE* fp;
+    if (argc < 2) {
+        printf("Usage: %s <source_file>\n", argv[0]);
+        return;
+    }
 
-    printf("Questo è un codice di prova");
-    printf("Ciao ciao ciao");
+    fp = fopen(argv[1], "r");
+    if(fp){
+        /* Reading in order to compile the file*/
+        
+    }
 }
