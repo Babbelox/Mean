@@ -15,6 +15,7 @@ void meanpile(int argc, char* argv[]){
         /* Reading in order to compile the file*/
         printf("Compiling file: %s\n", argv[1]);
         // Compilation logic would go here
+        printf("Compilation successful.\n");
         fclose(fp);
     }
 }
