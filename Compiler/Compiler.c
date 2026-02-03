@@ -13,6 +13,8 @@ void meanpile(int argc, char* argv[]){
     fp = fopen(argv[1], "r");
     if(fp){
         /* Reading in order to compile the file*/
-        
+        printf("Compiling file: %s\n", argv[1]);
+        // Compilation logic would go here
+        fclose(fp);
     }
 }
