@@ -34,7 +34,7 @@ typedef enum {
 } TokenType;
 
 
-void meanpile(int argc, char* argv[]){
+FILE* meanpile(int argc, char* argv[]){
     FILE* fp;
     int i, dim_buff;
     char buffer[256];
@@ -65,15 +65,14 @@ void meanpile(int argc, char* argv[]){
 
 
 int tokenizer(char* buff, int dim_buff, Token* Token_list){
-    
     int temp_dim;
-
+    
     if (dim_buff==1){
         switch(buff[0]){
             case '(': temp_dim = TOKEN_PAREN_OPEN; break;
             case ')': temp_dim = TOKEN_PAREN_CLOSE; break;
             case ';': temp_dim = TOKEN_SEMICOLON; break;
-            default: temp_dim = -1; break;
+            default: temp_dim = TOKEN_IDENTIFIER; break;
         }
     }
 
